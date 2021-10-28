@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="style.css">    
+</head>
+
+<body>
+    <div class="Fmaindiv">
+       
+        <!-- navbar starting -->
+
+        <div class="navbar">
+            <div class="lchild">
+                <img class="logo" src="images/alexander-shatov-qt7S2QuAhJI-unsplash.jpg" alt="logo">    
+                <h2>Tukan Music</h2>           
+            </div>
+            <div class="rchild">
+                <h3>Choose Song In</h3>
+                <select name="" id="song_language" onchange="getOption(this)">
+                    <option value="empty"></option>
+                    <option id="eng" value="English">English</option>
+                    <option id="hin" value="Hindi">Hindi</option>
+                    <option id="ben" value="Bengali">Bengali</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- main_container starting -->
+
+        <div class="maincontainer">
+            <marquee direction="right"><h2 id="title"></h2></marquee>    
+            <h3 id="artist">Choose Song In and tap next</h3>
+            <div class="img_container">
+               <img id="biswa" src="images/jason-leung-xR4JHzr69Og-unsplash.jpg" alt="cover_image">
+            </div>
+               <audio src="ttsMP3.com_VoiceText_2021-10-26_21_47_13"></audio>
+
+         <!-- progress bar part  -->
+
+            <div class="progressbar_container" id="progress_container">
+                <div class="progress_duration_meter">
+                   <span style="color: white;"> <div id="current_time"></div> </span> 
+                   <span style="color: white;" > <div id="duration"></div> </span>
+                </div>
+
+                <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress"></div>
+               </div>
+            </div>
+
+         <!-- control part -->
+            <div class="music_controls">
+                <i class="fas fa-backward" id="prev" title="previous"></i>
+                <i class="fas fa-play main_button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript part starting -->
+
+ <script src="music.js"></script>
+</body>
+
+</html>
+
